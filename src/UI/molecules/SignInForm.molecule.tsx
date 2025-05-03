@@ -1,16 +1,16 @@
 import { Box, Button, Stack, Typography } from '@mui/material'
 import InputAtom from '../atoms/Input.atom'
 import { useContext } from 'react'
-import SignInContext from '../contexts/signInContext';
+import { SignInContext } from '../contexts/contexts';
 import TEXT from '../../utils/constants/text.constants';
 import style from './style';
 
 const SignInForm = () => {
-  const {navigateToSignUp} = useContext(SignInContext);
+  const { navigateToSignUp } = useContext(SignInContext);
   return (
     <Stack gap={3}>
       <InputAtom label={TEXT.EMAIL} placeholder={TEXT.EMAIL_ID} fullWidth />
-      <InputAtom label={TEXT.PASSWORD} placeholder={TEXT.ENTER_PASSWORD} fullWidth />
+      <InputAtom label={TEXT.PASSWORD} placeholder={TEXT.PASSWORD_CODE} type={'password'} fullWidth />
       <Button fullWidth variant="contained">{TEXT.SIGN_IN}</Button>
       <Typography variant="body2" sx={{ textAlign: 'center' }}>
         {TEXT.NO_ACCOUNT} &nbsp;

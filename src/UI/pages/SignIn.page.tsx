@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import SignInContext from "../contexts/signInContext"
+import { SignInContext } from "../contexts/contexts"
 import SignInTemplate from "../templates/SignIn.template";
 import ROUTES from "../../utils/constants/routes.contants";
 
@@ -13,10 +13,10 @@ const SignIn = () => {
   }
 
   // ==================== || CONTEXTS || ==================== //
-  const sigInContextValue = {navigateToSignUp};
+  const sigInContextValue = { navigateToSignUp };
   return (
     <SignInContext.Provider value={sigInContextValue}>
-      <SignInTemplate/>
+      <SignInTemplate />
     </SignInContext.Provider>
   )
 }
