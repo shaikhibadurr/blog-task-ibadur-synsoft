@@ -1,4 +1,5 @@
 import PublicLayout from "../layout/PublicLayout";
+import SignIn from "../UI/pages/SignIn.page";
 import ROUTES from "../utils/constants/routes.contants";
 
 const publicRoutes = [{
@@ -6,8 +7,8 @@ const publicRoutes = [{
   Component: PublicLayout,
   children:[
     {
-      path: ROUTES.BASE,
-      element: <></>
+      path: ROUTES.SIGN_IN,
+      Component: SignIn
     }
   ]
   }]

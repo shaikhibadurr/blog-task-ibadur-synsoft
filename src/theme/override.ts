@@ -1,22 +1,34 @@
-import { Theme } from "@mui/material";
+import { Theme } from "@mui/material"
+import colors from "../assets/scss/theme-vars.module.scss"
 
-const componentsOverrides = (theme:Theme)=>{
+const componentsOverrides = (theme: Theme) => {
   return ({
-    MuiButton:{
-      defaultProps:{
-        disableElevation:true,
+    MuiButton: {
+      defaultProps: {
+        disableElevation: true,
       },
-      styleOverrides:{
-        root:{
-          textTransform:'capitalize',
+      styleOverrides: {
+        root: {
+          textTransform: 'capitalize',
           fontSize: '1.125rem',
-          fontWeight: 600,
           lineHeight: 1.33,
           padding: '8px 12px',
           borderRadius: '56px'
         }
       }
-    }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        input: {
+          '::placeholder': {
+            color: colors.lightTextPrimary,
+            fontSize: '14px',
+            fontWeight: 400,
+          },
+          padding: '10px 12px'
+        },
+      },
+    },
   } as Theme['components'])
 }
 

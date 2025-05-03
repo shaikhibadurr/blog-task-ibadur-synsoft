@@ -4,6 +4,9 @@ const themePalette = (colors: ThemeColors) => {
     primary: {
       main:colors.primaryMain
     },
+    text:{
+      primary: colors.heading,
+    }
   }
 }
 

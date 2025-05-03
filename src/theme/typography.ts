@@ -1,5 +1,5 @@
-import { Theme } from "@mui/material";
-import { ThemeOptions } from "@mui/material/styles";
+import { Theme } from "@mui/material"
+import { ThemeOptions } from "@mui/material/styles"
 import colors from "../assets/scss/theme-vars.module.scss"
 
 const themeTypography = (theme: Theme): ThemeOptions['typography'] => {
@@ -9,7 +9,6 @@ const themeTypography = (theme: Theme): ThemeOptions['typography'] => {
       fontFamily: 'Lora',
       fontSize: '2.25rem',
       fontWeight: 700,
-      color: colors.heading,
       lineHeight: 1,
     },
     h4: {
@@ -21,7 +20,6 @@ const themeTypography = (theme: Theme): ThemeOptions['typography'] => {
     h5:{
       fontSize: '1.5rem',
       fontWeight: 600,
-      color: colors.heading,
       lineHeight: 1.33,
     },
     h6:{
@@ -32,14 +30,13 @@ const themeTypography = (theme: Theme): ThemeOptions['typography'] => {
     body1:{
       fontSize: '0.875rem',
       fontWeight: 500,
-      color: colors.heading,
       lineHeight: 1.25
     },
     body2: {
       fontSize: '0.75rem',
       fontWeight: 400,
       color: colors.lightTextSecondary,
-      lineHeight: 1.6,
+      lineHeight: 1.72,
     },
     caption: {
       fontSize: '0.875rem',
