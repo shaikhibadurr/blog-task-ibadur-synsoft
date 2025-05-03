@@ -9,7 +9,7 @@ const style = {
   signInButton: { color: (theme: Theme) => theme.palette.common.black, fontSize: '14px', fontWeight: 600, background: 'white', width: '74px', pt: '6px' },
   footerText: { fontSize: '16px', color: (theme: Theme) => theme.palette.common.white, fontWeight: 400 },
   footerBox: { background: '#000000', height: '64px' },
-  signInBgImg: { backgroundImage: `url(${SigInBg})`,backgroundPosition:'center', backgroundSize: 'cover', width: '100%', height: '100%', borderRadius: '15px' }
+  signInBgImg: { backgroundImage: `url(${SigInBg})`, backgroundPosition: 'center', backgroundSize: 'cover', width: '100%', height: { xs: '200px', md: '100%' }, borderRadius: '15px' }
 }
 
 export default style;

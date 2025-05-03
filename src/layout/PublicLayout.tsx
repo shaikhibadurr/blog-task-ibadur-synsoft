@@ -4,11 +4,11 @@ import style from './style'
 
 const PublicLayout = () => {
   return (
-    <Stack direction={'row'} sx={style.fullMinHeight}>
-      <Box flex={1}>
+    <Stack direction={{ xl: 'column', md: 'row' }} sx={style.fullMinHeight}>
+      <Box flex={1} order= {{ xs: 2, md: 1 }}>
         <Outlet />
       </Box>
-      <Stack flex={1} p={2}>
+      <Stack flex={1} p={2} sx={{ order: { xs: 1, md: 2 } }}>
         <Box sx={style.signInBgImg}>
         </Box>
       </Stack>
