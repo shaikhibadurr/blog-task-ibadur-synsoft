@@ -18,11 +18,16 @@ const themeTypography = (theme: Theme): ThemeOptions['typography'] => {
       fontWeight: 700,
       color: colors.black
     },
-    h6:{
+    h5:{
       fontSize: '1.5rem',
       fontWeight: 600,
       color: colors.heading,
       lineHeight: 1.33,
+    },
+    h6:{
+      fontSize: '1.25rem',
+      fontWeight: 700,
+      lineHeight:1,
     },
     body1:{
       fontSize: '0.875rem',
