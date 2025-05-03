@@ -1,11 +1,11 @@
-import { Button, Typography } from '@mui/material'
 import './App.css'
 import ThemeCustomisation from './theme/theme'
+import Routing from './routing/routing'
 
 function App() {
   return (
     <ThemeCustomisation>
-      <Typography color='primary' variant="h3">App is Running</Typography>
+      <Routing />
     </ThemeCustomisation>
   )
 }

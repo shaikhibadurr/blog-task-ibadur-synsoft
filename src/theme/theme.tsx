@@ -15,6 +15,7 @@ const ThemeCustomisation: React.FC<ThemeCustomisationProps> = ({ children }) => 
     palette: themePalette(colors),
   })
 
+  // pass update palette to typography and components
   customisedTheme = createTheme({
     ...customisedTheme,
     typography: themeTypography(customisedTheme),
