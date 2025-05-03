@@ -1,0 +1,32 @@
+// Primary 
+$primaryMain: #6941C6;
+$primaryLight: #F9F5FF;
+
+// Secondary
+$secondaryMain: #026AA2;
+$secondaryLight: #F0F9FF;
+
+// Success
+$successMain: #027A48;
+$successLight: #ECFDF3;
+
+// Text
+$heading: #1A1A1A;
+$lightTextSecondary: #98A2B3;
+$lightTextPrimary: #667085;
+
+// general
+$black: #000000;
+
+:export {
+  primaryMain: $primaryMain;
+  primaryLight: $primaryLight;
+  secondaryMain: $secondaryMain;
+  secondaryLight: $secondaryLight;
+  successMain: $successMain;
+  successLight: $successLight;
+  heading: $heading;
+  black: $black;
+  lightTextSecondary: $lightTextSecondary;
+  lightTextPrimary: $lightTextPrimary;
+}
