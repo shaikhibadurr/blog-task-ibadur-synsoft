@@ -1,4 +1,3 @@
-import './App.css'
 import ThemeCustomisation from './theme/theme'
 import Routing from './routing/routing'
 import { AuthProvider } from './UI/contexts/contexts'

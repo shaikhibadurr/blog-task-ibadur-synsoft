@@ -22,10 +22,17 @@ const style = {
       paddingBottom: '6px',
       paddingLeft: 0,
     },
+    "& .MuiInputBase-input::placeholder": {
+      color: "#6F6F6F",
+      opacity: 1,
+    },
+    "& .MuiInputAdornment-root svg": {
+      color: "#6F6F6F", 
+    },
   },
   addButton: { padding: '7px 16px', fontSize: '14px' },
-  blogContainer: { cursor:'pointer', minWidth: { xs: '280px', sm: '350px' } },
-  blogImg: (url:string) => ({ height: '240px', backgroundImage: `url(${API_BASE}${url})`, backgroundPosition: 'center', backgroundSize: 'cover' }),
+  blogContainer: { cursor: 'pointer', minWidth: { xs: '280px', sm: '350px' } },
+  blogImg: (url: string) => ({ height: '240px', backgroundImage: `url(${API_BASE}${url})`, backgroundPosition: 'center', backgroundSize: 'cover' }),
   blogLinkIcon: { width: '24px', height: '24px' },
   blogDesc: { fontSize: '1rem', fontWeight: 400, color: '#667085' },
   blogTag: (color: ColorType) => {

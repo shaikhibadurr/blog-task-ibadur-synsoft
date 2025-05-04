@@ -17,10 +17,10 @@ const HomeTemplate: React.FC<HomeTemplateProps> = ({ blogs }) => {
         <BlogHeader />
         <Grid container rowSpacing={7.5} columnSpacing={4} >
           {blogs?.length ?
-            blogs.map((blog: BlogProps) => {
+            blogs.map((blog: BlogProps, ind) => {
               const { image, title, author, desc, date, tag } = blog
               return (
-                <Grid size={{ xs: 12, sm: 6, lg: 4 }}>
+                <Grid key={ind} size={{ xs: 12, sm: 6, lg: 4 }}>
                   <Blog color="primary"
                     {...{ image, title, author, date, desc, tag }}
                   />

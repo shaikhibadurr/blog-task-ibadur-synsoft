@@ -3,8 +3,8 @@ import { createTheme, CssBaseline, StyledEngineProvider } from "@mui/material"
 import { ReactNode } from "react"
 import themePalette from "./palette"
 import colors from '../assets/scss/theme-vars.module.scss'
-import componentsOverrides from "./override"
 import themeTypography from "./typography"
+import componentsOverrides from "./component"
 
 type ThemeCustomisationProps = {
   children: ReactNode

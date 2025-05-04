@@ -1,6 +1,6 @@
 import { Box, Button, InputAdornment, Stack, TextField, Typography } from '@mui/material'
-import SearchIcon from "../../assets/images/search.png"
-import AddRoundedIcon from '@mui/icons-material/AddRounded'
+import { FiPlus } from "react-icons/fi";
+import { LuSearch } from "react-icons/lu";
 import style from './style'
 
 const BlogHeader = () => {
@@ -14,11 +14,11 @@ const BlogHeader = () => {
         <TextField placeholder="Search..." variant="outlined" sx={style.searchInput}
           slotProps={{
             input: {
-              startAdornment: (<InputAdornment position="start"> <img src={SearchIcon} alt="search icon" style={{ width: 14, height: 14 }} /></InputAdornment>),
+              startAdornment: (<InputAdornment position="start"> <LuSearch /></InputAdornment>),
             },
           }}
         />
-        <Button variant="contained" size="small" startIcon={<AddRoundedIcon />} sx={style.addButton}>Add</Button>
+        <Button variant="contained" size="small" startIcon={<FiPlus />} sx={style.addButton}>Add</Button>
       </Stack>
     </Stack>
   )

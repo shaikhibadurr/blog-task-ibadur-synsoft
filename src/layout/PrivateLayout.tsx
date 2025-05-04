@@ -2,6 +2,7 @@ import { Button, Stack, Typography } from '@mui/material'
 import { Outlet } from 'react-router-dom'
 import style from './style'
 import { useAuth } from '../UI/contexts/contexts'
+import LogoIcon from "../assets/images/logo.png"
 
 const PrivateLayout = () => {
   const { setTokenState } = useAuth()
@@ -11,9 +12,7 @@ const PrivateLayout = () => {
       {/* --------- Header --------- */}
       <Stack justifyContent={'center'} sx={style.headerBox}>
         <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'} sx={style.headerContent}>
-          <Typography variant="h6" sx={style.headerLogo}>
-            LOGO
-          </Typography>
+          <img src={LogoIcon} alt='Logo'/>
           <Button onClick={() => setTokenState(null)} variant="contained" sx={style.signInButton}>Sign Out</Button>
         </Stack>
       </Stack>
