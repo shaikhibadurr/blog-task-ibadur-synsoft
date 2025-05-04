@@ -1,30 +1,35 @@
-import { Box, Grid, Stack } from "@mui/material"
+import { Box, Grid, Stack, Typography } from "@mui/material"
 import HomeSlider from "../molecules/HomeSlider.molecule"
 import BlogHeader from "../molecules/BlogHeader.molecule"
 import Blog from "../molecules/Blog.molecule"
+import { BlogProps } from "../../types/common"
+import React from "react"
 
-const HomeTemplate = () => {
+type HomeTemplateProps = {
+  blogs: BlogProps[]
+}
+
+const HomeTemplate: React.FC<HomeTemplateProps> = ({ blogs }) => {
   return (
     <Stack>
       <HomeSlider />
       <Box sx={{ width: '100%', maxWidth: '1224px', px: 3, margin: 'auto' }}>
         <BlogHeader />
         <Grid container rowSpacing={7.5} columnSpacing={4} >
-          <Grid size={{ xs: 12, sm: 6, lg: 4 }}>
-            <Blog color="primary"/>
-          </Grid>
-          <Grid size={{ xs: 12, sm: 6, lg: 4 }}>
-            <Blog color="secondary"/>
-          </Grid>
-          <Grid size={{ xs: 12, sm: 6, lg: 4 }}>
-            <Blog color="success"/>
-          </Grid>
-          <Grid size={{ xs: 12, sm: 6, lg: 4 }}>
-            <Blog color="success" />
-          </Grid>
-          <Grid size={{ xs: 12, sm: 6, lg: 4 }}>
-            <Blog color="success"/>
-          </Grid>
+          {blogs?.length ?
+            blogs.map((blog: BlogProps) => {
+              const { image, title, author, desc, date, tag } = blog
+              return (
+                <Grid size={{ xs: 12, sm: 6, lg: 4 }}>
+                  <Blog color="primary"
+                    {...{ image, title, author, date, desc, tag }}
+                  />
+                </Grid>
+              )
+            })
+            :
+            <Typography variant="h6" sx={{ textAlign: 'center', opacity: 0.6 }}>No Blogs Available...</Typography>
+          }
         </Grid>
       </Box>
     </Stack>

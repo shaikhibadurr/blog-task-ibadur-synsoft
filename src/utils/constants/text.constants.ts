@@ -18,4 +18,4 @@ const TEXT = {
   ALREADY_ACCOUNT: 'Already have an account?'
 }
 
-export default TEXT;
+export default TEXT

@@ -1,12 +1,15 @@
 import './App.css'
 import ThemeCustomisation from './theme/theme'
 import Routing from './routing/routing'
+import { AuthProvider } from './UI/contexts/contexts'
 
 function App() {
   return (
-    <ThemeCustomisation>
-      <Routing />
-    </ThemeCustomisation>
+    <AuthProvider>
+      <ThemeCustomisation>
+        <Routing />
+      </ThemeCustomisation>
+    </AuthProvider>
   )
 }
 

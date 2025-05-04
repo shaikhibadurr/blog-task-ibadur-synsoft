@@ -11,7 +11,7 @@ type ThemeCustomisationProps = {
 }
 
 const ThemeCustomisation: React.FC<ThemeCustomisationProps> = ({ children }) => {
-  let customisedTheme = createTheme({
+  let theme = createTheme({
     breakpoints: {
       values: {
         xs:0,
@@ -22,18 +22,13 @@ const ThemeCustomisation: React.FC<ThemeCustomisationProps> = ({ children }) => 
       },
     },
     palette: themePalette(colors),
-  })
-
-  // pass update palette to typography and components
-  customisedTheme = createTheme({
-    ...customisedTheme,
-    typography: themeTypography(customisedTheme),
-    components: componentsOverrides(customisedTheme)
+    typography: themeTypography(),
+    components: componentsOverrides()
   })
 
   return (
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={customisedTheme}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         {children}
       </ThemeProvider>

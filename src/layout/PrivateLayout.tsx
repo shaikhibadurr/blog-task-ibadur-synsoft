@@ -1,8 +1,10 @@
 import { Button, Stack, Typography } from '@mui/material'
 import { Outlet } from 'react-router-dom'
 import style from './style'
+import { useAuth } from '../UI/contexts/contexts'
 
 const PrivateLayout = () => {
+  const { setTokenState } = useAuth()
   return (
     <Stack sx={style.fullMinHeight}>
 
@@ -12,7 +14,7 @@ const PrivateLayout = () => {
           <Typography variant="h6" sx={style.headerLogo}>
             LOGO
           </Typography>
-          <Button variant="contained" sx={style.signInButton}>Sign In</Button>
+          <Button onClick={() => setTokenState(null)} variant="contained" sx={style.signInButton}>Sign Out</Button>
         </Stack>
       </Stack>
 

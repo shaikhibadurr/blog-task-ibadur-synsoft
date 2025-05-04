@@ -19,4 +19,4 @@ const themePalette = (colors: ThemeColors) => {
   }
 }
 
-export default themePalette;
+export default themePalette

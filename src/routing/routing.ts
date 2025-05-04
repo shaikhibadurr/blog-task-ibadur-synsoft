@@ -1,10 +1,11 @@
-import { useRoutes } from "react-router-dom";
-import privateRoutes from "./privateRoutes";
-import publicRoutes from "./publicRoutes";
+import { useRoutes } from "react-router-dom"
+import privateRoutes from "./privateRoutes"
+import publicRoutes from "./publicRoutes"
+import { useAuth } from "../UI/contexts/contexts"
 
 const Routing = () => {
-  const token = false;
-  return useRoutes(token?privateRoutes:publicRoutes);
+  const { tokenState } = useAuth()
+  return useRoutes(tokenState ? privateRoutes : publicRoutes)
 }
 
-export default Routing;
+export default Routing

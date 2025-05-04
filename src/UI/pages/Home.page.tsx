@@ -1,23 +1,32 @@
-import { useNavigate } from "react-router-dom";
-import { HomeContext } from "../contexts/contexts"
-import ROUTES from "../../utils/constants/routes.contants";
-import HomeTemplate from "../templates/Home.template";
+import HomeTemplate from "../templates/Home.template"
+import { useEffect, useState } from "react"
+import { blogApi } from "../../api/blog"
+import toast from "react-hot-toast"
+import { BlogProps } from "../../types/common"
+import { AxiosError } from "axios"
 
 const Home = () => {
   // ==================== || HOOKS || ==================== //
-  const navigate = useNavigate();
+  const [blogs, setBlogs] = useState<BlogProps[]>([])
 
   // ==================== || FUNCTIONS || ==================== //
-  const navigateToSignUp = () => {
-    navigate(ROUTES.SIGN_UP);
+  const getBlogs = async () => {
+    try {
+      const res = await blogApi()
+      const blogRes = res.data
+      setBlogs(blogRes)
+    } catch (err) {
+      const axiosError = err as AxiosError<{ msg: string }>;
+      toast.error(axiosError.response?.data?.msg || "API failed");
+    }
   }
 
-  // ==================== || CONTEXTS || ==================== //
-  const sigInContextValue = { navigateToSignUp };
+  useEffect(() => {
+    getBlogs()
+  }, [])
+
   return (
-    <HomeContext.Provider value={sigInContextValue}>
-      <HomeTemplate />
-    </HomeContext.Provider>
+    <HomeTemplate blogs={blogs} />
   )
 }
 

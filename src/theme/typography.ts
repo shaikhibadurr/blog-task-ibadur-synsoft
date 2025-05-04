@@ -1,9 +1,8 @@
-import { Theme } from "@mui/material"
-import { ThemeOptions } from "@mui/material/styles"
+import { Theme } from "@mui/material/styles"
 import colors from "../assets/scss/theme-vars.module.scss"
 
-const themeTypography = (theme: Theme): ThemeOptions['typography'] => {
-  return ({
+const themeTypography = () => {
+  return {
     fontFamily: 'Inter',
     h3: {
       fontFamily: 'Lora',
@@ -43,7 +42,7 @@ const themeTypography = (theme: Theme): ThemeOptions['typography'] => {
       color: colors.lightTextPrimary,
       lineHeight: 1.43
     }
-  })
+  } as Theme['typography']
 }
 
-export default themeTypography;
+export default themeTypography

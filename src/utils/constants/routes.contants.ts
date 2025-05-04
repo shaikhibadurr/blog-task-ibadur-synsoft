@@ -3,6 +3,6 @@ const ROUTES = {
   SIGN_IN: "/sign-in",
   SIGN_UP: "/sign-up",
   NO_MATCH: "*",
-};
+}
 
-export default ROUTES;
+export default ROUTES

@@ -1,8 +1,8 @@
-import { Navigate } from "react-router-dom";
-import PublicLayout from "../layout/PublicLayout";
-import SignIn from "../UI/pages/SignIn.page";
-import SignUp from "../UI/pages/SignUp.page";
-import ROUTES from "../utils/constants/routes.contants";
+import { Navigate } from "react-router-dom"
+import PublicLayout from "../layout/PublicLayout"
+import SignIn from "../UI/pages/SignIn.page"
+import SignUp from "../UI/pages/SignUp.page"
+import ROUTES from "../utils/constants/routes.contants"
 
 const publicRoutes = [{
   path: ROUTES.BASE,
@@ -27,4 +27,4 @@ const publicRoutes = [{
   ]
 }]
 
-export default publicRoutes;
+export default publicRoutes

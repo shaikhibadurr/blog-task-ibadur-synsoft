@@ -1,7 +1,7 @@
 import { Theme } from "@mui/material"
 import colors from "../assets/scss/theme-vars.module.scss"
 
-const componentsOverrides = (theme: Theme) => {
+const componentsOverrides = () => {
   return ({
     MuiButton: {
       defaultProps: {
@@ -33,4 +33,4 @@ const componentsOverrides = (theme: Theme) => {
 }
 
 
-export default componentsOverrides;
+export default componentsOverrides

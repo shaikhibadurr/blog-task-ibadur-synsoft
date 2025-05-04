@@ -1,7 +1,7 @@
 import { Theme } from "@mui/material"
 import HomeBg from "../../assets/images/home-bg.jpg"
-import BlogImg from "../../assets/images/blog1.jpg"
 import { ColorType } from "../../types/common"
+import { API_BASE } from "../../utils/constants/envVar.constants"
 
 const style = {
   textLink: { cursor: 'pointer', fontWeight: 500, color: (theme: Theme) => theme.palette.text.primary },
@@ -24,8 +24,8 @@ const style = {
     },
   },
   addButton: { padding: '7px 16px', fontSize: '14px' },
-  blogContainer: { minWidth: { xs: '280px', sm: '350px' } },
-  blogImg: { height: '240px', backgroundImage: `url(${BlogImg})`, backgroundPosition: 'center', backgroundSize: 'cover' },
+  blogContainer: { cursor:'pointer', minWidth: { xs: '280px', sm: '350px' } },
+  blogImg: (url:string) => ({ height: '240px', backgroundImage: `url(${API_BASE}${url})`, backgroundPosition: 'center', backgroundSize: 'cover' }),
   blogLinkIcon: { width: '24px', height: '24px' },
   blogDesc: { fontSize: '1rem', fontWeight: 400, color: '#667085' },
   blogTag: (color: ColorType) => {
