@@ -5,9 +5,9 @@ import SignUp from "../UI/pages/SignUp.page";
 import ROUTES from "../utils/constants/routes.contants";
 
 const publicRoutes = [{
-  path:ROUTES.BASE,
+  path: ROUTES.BASE,
   Component: PublicLayout,
-  children:[
+  children: [
     {
       path: ROUTES.SIGN_IN,
       Component: SignIn
@@ -18,9 +18,13 @@ const publicRoutes = [{
     },
     {
       path: ROUTES.NO_MATCH,
-      element: <Navigate to={ROUTES.SIGN_IN}/>
+      element: <Navigate to={ROUTES.SIGN_IN} />
+    },
+    {
+      path: ROUTES.BASE,
+      element: <Navigate to={ROUTES.SIGN_IN} />
     }
   ]
-  }]
+}]
 
 export default publicRoutes;
