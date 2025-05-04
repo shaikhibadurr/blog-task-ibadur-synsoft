@@ -3,7 +3,7 @@ import privateRoutes from "./privateRoutes";
 import publicRoutes from "./publicRoutes";
 
 const Routing = () => {
-  const token = false;
+  const token = true;
   return useRoutes(token?privateRoutes:publicRoutes);
 }
 

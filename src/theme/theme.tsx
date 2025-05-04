@@ -12,6 +12,15 @@ type ThemeCustomisationProps = {
 
 const ThemeCustomisation: React.FC<ThemeCustomisationProps> = ({ children }) => {
   let customisedTheme = createTheme({
+    breakpoints: {
+      values: {
+        xs:0,
+        sm: 768,
+        md: 900,
+        lg: 1200,
+        xl:1536
+      },
+    },
     palette: themePalette(colors),
   })
 

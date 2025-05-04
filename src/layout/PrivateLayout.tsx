@@ -22,7 +22,7 @@ const PrivateLayout = () => {
       </Stack>
 
       {/* --------- Footer --------- */}
-      <Stack justifyContent={'center'} alignItems={'center'} sx={style.footerBox}>
+      <Stack mt={10} justifyContent={'center'} alignItems={'center'} sx={style.footerBox}>
         <Typography sx={style.footerText}>
           Copyright © 2025 Synsoft Global
         </Typography>

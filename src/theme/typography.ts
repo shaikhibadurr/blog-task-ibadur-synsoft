@@ -9,7 +9,6 @@ const themeTypography = (theme: Theme): ThemeOptions['typography'] => {
       fontFamily: 'Lora',
       fontSize: '2.25rem',
       fontWeight: 700,
-      lineHeight: 1,
     },
     h4: {
       fontFamily: 'Lora',
