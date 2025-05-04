@@ -20,13 +20,30 @@ const Home = () => {
       toast.error(axiosError.response?.data?.msg || "API failed");
     }
   }
+  function getCategoryStatus(category: string) {
+    switch (category.toLocaleLowerCase()) {
+      case 'leadership':
+      case 'design':
+      case 'podcasts':
+        return 'primary'
+
+      case 'product':
+        return 'secondary'
+
+      case 'software development':
+        return 'success'
+
+      default:
+        return 'primary'
+    }
+  }
 
   useEffect(() => {
     getBlogs()
   }, [])
 
   return (
-    <HomeTemplate blogs={blogs} />
+    <HomeTemplate blogs={blogs} getCategoryStatus={getCategoryStatus} />
   )
 }
 

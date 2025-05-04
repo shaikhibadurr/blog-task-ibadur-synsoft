@@ -2,14 +2,15 @@ import { Box, Grid, Stack, Typography } from "@mui/material"
 import HomeSlider from "../molecules/HomeSlider.molecule"
 import BlogHeader from "../molecules/BlogHeader.molecule"
 import Blog from "../molecules/Blog.molecule"
-import { BlogProps } from "../../types/common"
+import { BlogProps, ColorType } from "../../types/common"
 import React from "react"
 
 type HomeTemplateProps = {
-  blogs: BlogProps[]
+  blogs: BlogProps[],
+  getCategoryStatus: (category: string) => ColorType
 }
 
-const HomeTemplate: React.FC<HomeTemplateProps> = ({ blogs }) => {
+const HomeTemplate: React.FC<HomeTemplateProps> = ({ blogs, getCategoryStatus }) => {
   return (
     <Stack>
       <HomeSlider />
@@ -21,8 +22,8 @@ const HomeTemplate: React.FC<HomeTemplateProps> = ({ blogs }) => {
               const { image, title, author, desc, date, tag } = blog
               return (
                 <Grid key={ind} size={{ xs: 12, sm: 6, lg: 4 }}>
-                  <Blog color="primary"
-                    {...{ image, title, author, date, desc, tag }}
+                  <Blog
+                    {...{ image, title, author, date, desc, tag, getCategoryStatus }}
                   />
                 </Grid>
               )

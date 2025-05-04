@@ -8,11 +8,10 @@ export type SignUpFormValues = {
 }
 
 export type BlogProps = {
-  color: ColorType,
   image: string,
   title: string,
   author: string,
   date: string,
   tag: string,
-  desc: string
+  desc: string,
 }
