@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import ROUTES from "../../utils/constants/routes.contants"
 import SignUpTemplate from "../templates/SignUp.template"
-import { Control, FieldErrors, useForm, UseFormGetValues } from "react-hook-form"
+import { Control, FieldErrors, useForm } from "react-hook-form"
 import { SignUpFormValues } from "../../types/common"
 import { createContext, useState } from "react"
 import { signupApi } from "../../api/auth"

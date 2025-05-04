@@ -1,0 +1,14 @@
+{
+  "name": "prome",
+  "private": true,
+  "workspaces": [
+    "fe",
+    "be"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace fe\" \"npm run dev --workspace be\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
