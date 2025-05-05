@@ -6,8 +6,8 @@ import { API_BASE } from "../../utils/constants/envVar.constants"
 const style = {
   textLink: { cursor: 'pointer', fontWeight: 500, color: (theme: Theme) => theme.palette.text.primary },
   homeSliderBg: { backgroundImage: `url(${HomeBg})`, backgroundPosition: 'center', backgroundSize: 'cover', height: '600px' },
-  homeContentBox: { pt: 29.5, width: '100%', maxWidth: '1224px', px: 3, margin: 'auto' },
-  homeContentWidth: { maxWidth: '500px' },
+  homeContentBox: { maxWidth: '1224px', margin:'auto', px: 3, display:'flex', flexFlow:'column', justifyContent:'end', height:'100%', py:'100px' },
+  homeContentWidth: { maxWidth: '500px', },
   homeContentTag: { fontSize: '10px', fontWeight: 600, padding: '5px 10px', borderRadius: 8, background: '#FFFFFF26', color: 'white' },
   homeContentTitle: { mt: 2, color: (theme: Theme) => theme.palette.common.white },
   homeContentDate: { flexShrink: 0, color: (theme: Theme) => theme.palette.common.white },

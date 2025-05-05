@@ -3,7 +3,7 @@ import SigInBg from "../assets/images/singin-bg.jpg"
 
 const style = {
   fullMinHeight: { minHeight: '100vh' },
-  headerBox: { position: 'absolute', height: '62px', width: '100%', background: '#00000033' },
+  headerBox: { position: 'absolute', height: '62px', width: '100%', background: '#00000033', zIndex:9 },
   headerContent: { width: '100%', maxWidth: '1224px', px: 3, margin: 'auto' },
   headerLogo: { color: '#F8F9FA', fontFamily: 'Spartan', mt: 0.75 },
   signInButton: { color: (theme: Theme) => theme.palette.common.black, fontSize: '14px', fontWeight: 600, background: 'white', py: '7px' },

@@ -14,11 +14,6 @@ const HomeSlider = () => {
             <Box sx={style.line}></Box>
             <Typography variant="body2" sx={style.whiteColor}>Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</Typography>
           </Stack>
-          <Stack mt={8} direction={'row'} gap={1.2}>
-            <Box sx={style.whiteCircle}></Box>
-            <Box sx={style.greyCircle}></Box>
-            <Box sx={style.greyCircle}></Box>
-          </Stack>
         </Box>
       </Box>
     </Box>
