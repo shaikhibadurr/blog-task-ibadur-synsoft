@@ -20,6 +20,9 @@ app.use('/api/assets', express.static(path.join(__dirname, 'assets')))
 
 app.use('/api', authRoutes)
 app.use('/api', blogRoutes)
+app.get('/api/check', (req, res) => {
+  res.status(200).json({ message: 'Backend is running ✅' });
+});
 
 mongoose.connect(process.env.MONGO_URI).then(() => {
   console.log('MongoDB connected')
