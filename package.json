@@ -1,9 +1,9 @@
 {
-  "name": "prome",
+  "name": "blog-task-ibadur-synsoft",
   "private": true,
   "workspaces": [
-    "fe",
-    "be"
+    "frontend",
+    "backend"
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev --workspace fe\" \"npm run dev --workspace be\""
