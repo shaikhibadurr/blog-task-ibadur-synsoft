@@ -1,54 +1,109 @@
-# React + TypeScript + Vite
+# 📝 Blog Task - Ibadur (Synsoft)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack blog application built with a modular architecture. This project contains a **React frontend** (using Vite) and a **Node.js backend** (with Express), connected via **MongoDB**. The setup instructions below will help you get started quickly on your local machine.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Quick Start Guide
 
-## Expanding the ESLint configuration
+Follow these steps to clone, configure, and run the project locally.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1️⃣ Clone the Repository
+
+```bash
+git clone <repository-url>
+cd blog-task-ibadur-synsoft
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2️⃣ Install Root Dependencies
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+---
+
+### 3️⃣ Frontend Setup (`/fe`)
+
+```bash
+cd fe
+npm install
+```
+
+#### 🔧 Create `.env` file in `/fe` with the following content:
+
+```env
+VITE_API_URL=<your-backend-api-url>
+VITE_TOKEN_KEY=<your-token-key>
+```
+
+---
+
+### 4️⃣ Backend Setup (`/be`)
+
+```bash
+cd ../be
+npm install
+```
+
+#### 🔧 Create `.env` file in `/be` with the following content:
+
+```env
+PORT=<your-port>
+MONGO_URI=<your-mongodb-uri>
+JWT_SECRET=<your-jwt-secret>
+```
+
+---
+
+### 5️⃣ Run the Project
+
+Go back to the root folder:
+
+```bash
+cd ..
+npm run dev
+```
+
+> This will start both the frontend and backend servers concurrently.
+
+---
+
+## 📁 Folder Structure
+
+```
+blog-task-ibadur-synsoft/
+├── fe/          # Frontend (React + Vite)
+│   ├── src/
+│   └── .env
+├── be/          # Backend (Node.js + Express)
+│   ├── src/
+│   └── .env
+├── package.json # Root package with dev script
+└── README.md
+```
+
+---
+
+## ⚙️ Technologies Used
+
+- **Frontend:** React, Vite, Axios, Tailwind (if used)
+- **Backend:** Node.js, Express, MongoDB, Mongoose, JWT
+- **Tools:** dotenv, concurrently, nodemon
+
+---
+
+## ✅ Tips
+
+- Use [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for easy cloud-based database setup.
+- You can change ports or API URLs in the respective `.env` files.
+
+---
+
+## 📬 Contact
+
+Have questions or feedback? Feel free to reach out!
