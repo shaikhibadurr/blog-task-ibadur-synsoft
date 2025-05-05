@@ -23,10 +23,10 @@ const SignUp = () => {
   // ==================== || HOOKS || ==================== //
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
-  const { handleSubmit, control, formState: { errors }, getValues } = useForm<SignUpFormValues>(
+  const { handleSubmit, control, formState: { errors }, watch } = useForm<SignUpFormValues>(
     { defaultValues: { name: '', phone: '', email: '', password: '', confirmPassword: '' } }
   )
-  const passwordValue = getValues('password')
+  const passwordValue = watch('password')
 
   // ==================== || FUNCTIONS || ==================== //
   const navigateToSignIn = () => {
